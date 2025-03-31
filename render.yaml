@@ -3,7 +3,7 @@ services:
     name: cajeros-backend
     runtime: python
     buildCommand: pip install -r requirements.txt
-    startCommand: gunicorn --config gunicorn.conf.py app:app
+    startCommand: gunicorn gunicorn app:app
     envVars:
       - key: DATABASE_URL
         value: ${cajeros-db.connectionString} # Usa la variable de entorno de Render
