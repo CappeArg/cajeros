@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estado de Cajeros</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Estado de Cajeros</h1>
+        <div class="cajeros-container">
+            <div class="cajero" id="cajero-1">
+                <h2>Cajero 1</h2>
+                <p id="estado-1">Desconocido</p>
+                <p id="actualizacion-1">Última actualización: Desconocido</p>
+                <button onclick="actualizarEstado(1, 'Con dinero')">Con dinero</button>
+                <button onclick="actualizarEstado(1, 'Sin dinero')">Sin dinero</button>
+            </div>
+            <div class="cajero" id="cajero-2">
+                <h2>Cajero 2</h2>
+                <p id="estado-2">Desconocido</p>
+                <p id="actualizacion-2">Última actualización: Desconocido</p>
+                <button onclick="actualizarEstado(2, 'Con dinero')">Con dinero</button>
+                <button onclick="actualizarEstado(2, 'Sin dinero')">Sin dinero</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
