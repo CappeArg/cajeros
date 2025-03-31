@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: cajeros-backend
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn --config gunicorn.conf.py app:app
+    envVars:
+      - key: DATABASE_URL # PostgreSQL
+        fromDatabase:
+          name: cajeros-db #
