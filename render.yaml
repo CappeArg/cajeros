@@ -5,6 +5,5 @@ services:
     buildCommand: pip install -r requirements.txt
     startCommand: gunicorn --config gunicorn.conf.py app:app
     envVars:
-      - key: DATABASE_URL # PostgreSQL
-        fromDatabase:
-          name: cajeros-db #
+      - key: DATABASE_URL
+        value: ${cajeros-db.connectionString} # Usa la variable de entorno de Render
